@@ -1,147 +1,80 @@
-import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
+import 'dart:convert';
+import 'dart:io';
 
-void main() => runApp(new MyApp());
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(new MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget titleSection = Container(
-      padding: const EdgeInsets.all(32.0),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    'Oeschinen Lake Campground',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Text(
-                  'Kandersteg, Switzerland',
-                  style: TextStyle(
-                    color: Colors.grey[500],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Text('41'),
-        ],
-      ),
+    return new MaterialApp(
+      home: new MyHomePage(),
     );
+  }
+}
 
-    Column buildButtonColumn(IconData icon, String label) {
-      Color color = Theme.of(context).primaryColor;
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key}) : super(key: key);
 
-      return Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: color),
-          Container(
-            margin: const EdgeInsets.only(top: 8.0),
-            child: Text(
-              label,
-              style: TextStyle(
-                fontSize: 12.0,
-                fontWeight: FontWeight.w400,
-                color: color,
-              ),
-            ),
-          ),
-        ],
-      );
+  @override
+  _MyHomePageState createState() => new _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  var _ipAddress = 'Unknown';
+
+  _getIPAddress() async {
+    var url = 'https://httpbin.org/ip';
+    var httpClient = new HttpClient();
+
+    String result;
+    try {
+      var request = await httpClient.getUrl(Uri.parse(url));
+      var response = await request.close();
+      if (response.statusCode == HttpStatus.OK) {
+        var res = await response.transform(utf8.decoder).join();
+        var data = json.decode(res);
+        result = data['origin'];
+      } else {
+        result =
+            'Error getting IP address:\nHttp status ${response.statusCode}';
+      }
+    } catch (exception) {
+      result = 'Failed getting IP address';
     }
 
-    Widget buttonSection = Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          buildButtonColumn(Icons.call, 'CALL'),
-          buildButtonColumn(Icons.near_me, 'ROUTE'),
-          buildButtonColumn(Icons.share, 'SHARE'),
-        ],
-      ),
-    );
+    // If the widget was removed from the tree while the message was in flight,
+    // we want to discard the reply rather than calling setState to update our
+    // non-existent appearance.
+    if (!mounted) return;
 
-    Widget textSection = Container(
-      padding: const EdgeInsets.all(32.0),
-      child: Text(
-        '''Lak1111e Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situated 1,578 meters above sea level, it is one of the larger Alpine Lakes. A gondola ride from Kandersteg, followed by a half-hour walk through pastures and pine forest, leads you to the lake, which warms to 20 degrees Celsius in the summer. Activities enjoyed here include rowing, and riding the summer toboggan run.
-        ''',
-        softWrap: true,
-      ),
-    );
+    setState(() {
+      _ipAddress = result;
+    });
+  }
 
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Top Lakes'),
-        ),
-        body: ListView(
-          children: [
-            Image.asset(
-              'assets/images/lake.jpg',
-              width: 600.0,
-              height: 240.0,
-              fit: BoxFit.cover,
+  @override
+  Widget build(BuildContext context) {
+    var spacer = new SizedBox(height: 32.0);
+
+    return new Scaffold(
+      body: new Center(
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new Text('Your1 current IP address is:'),
+            new Text('$_ipAddress.'),
+            spacer,
+            new RaisedButton(
+              onPressed: _getIPAddress,
+              child: new Text('Get IP address'),
             ),
-            titleSection,
-            buttonSection,
-            textSection,
           ],
         ),
       ),
     );
   }
-}
-
-@override
-Widget build(BuildContext context) {
-  Widget titleSection = new Container(
-    padding: const EdgeInsets.all(32.0),
-    child: new Row(
-      children: [
-        new Expanded(
-          child: new Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              new Container(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: new Text(
-                  'Oeschinen Lake Campground',
-                  style: new TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              new Text(
-                'Kandersteg, Switzerland',
-                style: new TextStyle(
-                  color: Colors.grey[500],
-                ),
-              ),
-            ],
-          ),
-        ),
-        new Icon(
-          Icons.star,
-          color: Colors.red[500],
-        ),
-        new Text('41'),
-      ],
-    ),
-  );
 }

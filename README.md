@@ -26,5 +26,17 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 flutter doctor
 ```
 ```
+在Mac上，通过Spotlight或使用以下命令找到模拟器:
+open -a Simulator
 flutter run
+
+Flutter: New Project
+
+
+flutter packages get
+
+首先创建一个新的应用程序:
+flutter create batterylevel
 ```
+
+[flutter](https://docs.flutter.io/)
