@@ -36,32 +36,32 @@ const Text.rich(
 Row({Key key, MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline textBaseline, List<Widget> children: const [] })
 new Row(
     children: <Widget>[
-    Expanded(
-        child: Text('Deliver features faster',
-            textAlign: TextAlign.center),
-    ),
-    Expanded(
-        child:
-            Text('Craft beautiful UIs', textAlign: TextAlign.center),
-    ),
-    Expanded(
-        child: FittedBox(
-        fit: BoxFit.contain, // otherwise the logo will be tiny
-        child: const FlutterLogo(),
+        Expanded(
+            child: Text('Deliver features faster',
+                textAlign: TextAlign.center),
         ),
-    ),
+        Expanded(
+            child:
+                Text('Craft beautiful UIs', textAlign: TextAlign.center),
+        ),
+        Expanded(
+            child: FittedBox(
+            fit: BoxFit.contain, // otherwise the logo will be tiny
+            child: const FlutterLogo(),
+            ),
+        ),
     ],
-    ),
-    new Row(
+),
+new Row(
     children: <Widget>[
-    const FlutterLogo(),
-    const Text(
-        'Flutter\'s hot reload helps you quickly and easily experiment, build UIs, add features, and fix bug faster. Experience sub-second reload times, without losing state, on emulators, simulators, and hardware for iOS and Android.',
-    ),
-    const Icon(Icons.sentiment_very_satisfied),
+        const FlutterLogo(),
+        const Text(
+            'Flutter\'s hot reload helps you quickly and easily experiment, build UIs, add features, and fix bug faster. Experience sub-second reload times, without losing state, on emulators, simulators, and hardware for iOS and Android.',
+        ),
+        const Icon(Icons.sentiment_very_satisfied),
     ],
-    ),
-    Row(
+),
+Row(
     children: <Widget>[
     const FlutterLogo(),
     const Expanded(
@@ -70,9 +70,9 @@ new Row(
     ),
     const Icon(Icons.sentiment_very_satisfied),
     ],
-    ),
-    Column({Key key, MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline textBaseline, List<Widget> children: const [] })
-    Column(
+),
+Column({Key key, MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline textBaseline, List<Widget> children: const [] })
+Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   mainAxisSize: MainAxisSize.min,
   children: <Widget>[
