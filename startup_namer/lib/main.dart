@@ -67,6 +67,27 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             new Text('Your1 current IP address is:'),
             new Text('$_ipAddress.'),
+            new Text(
+              'Hello, $_ipAddress! How are you?',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+            new Text.rich(
+              TextSpan(
+                text: 'Hello', // default text style
+                children: <TextSpan>[
+                  TextSpan(
+                      text: ' beautiful ',
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold)),
+                  TextSpan(
+                      text: 'world',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                ],
+              ),
+            ),
             spacer,
             new RaisedButton(
               onPressed: _getIPAddress,
