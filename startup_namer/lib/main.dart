@@ -93,39 +93,34 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: _getIPAddress,
               child: new Text('Get IP address'),
             ),
-            new Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                new Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Text('Deliver features faster',
-                          textAlign: TextAlign.center),
-                    ),
-                    Expanded(
-                      child: Text('Craft beautiful UIs',
-                          textAlign: TextAlign.center),
-                    ),
-                    Expanded(
-                      child: FittedBox(
-                        fit: BoxFit.contain, // otherwise the logo will be tiny
-                        child: const FlutterLogo(),
-                      ),
-                    ),
-                  ],
+            new Center(
+              child: Container(
+                margin: const EdgeInsets.all(10.0),
+                color: const Color(0xFF00FF00),
+                width: 48.0,
+                height: 48.0,
+              ),
+            ),
+            new Container(
+              constraints: BoxConstraints.expand(
+                height:
+                    Theme.of(context).textTheme.display1.fontSize * 1.1 + 200.0,
+              ),
+              padding: const EdgeInsets.all(8.0),
+              color: Colors.teal.shade700,
+              alignment: Alignment.center,
+              child: Text('Hello World',
+                  style: Theme.of(context)
+                      .textTheme
+                      .display1
+                      .copyWith(color: Colors.white)),
+              foregroundDecoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage('//www.example.com/images/frame.png'),
+                  centerSlice: Rect.fromLTRB(270.0, 180.0, 1360.0, 730.0),
                 ),
-                Text('We 1move under cover and we move as one'),
-                Text('Through the night, we have one shot to live another day'),
-                Text('We cannot let a stray gunshot give us away'),
-                Text('We will fight up close, seize the moment and stay in it'),
-                Text('It’s either that or meet the business end of a bayonet'),
-                Text('The code word is ‘Rochambeau,’ dig me?'),
-                Text('Rochambeau!',
-                    style: DefaultTextStyle.of(context)
-                        .style
-                        .apply(fontSizeFactor: 2.0)),
-              ],
+              ),
+              transform: Matrix4.rotationZ(0.1),
             )
           ],
         ),
