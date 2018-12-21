@@ -93,6 +93,40 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: _getIPAddress,
               child: new Text('Get IP address'),
             ),
+            new Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                new Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text('Deliver features faster',
+                          textAlign: TextAlign.center),
+                    ),
+                    Expanded(
+                      child: Text('Craft beautiful UIs',
+                          textAlign: TextAlign.center),
+                    ),
+                    Expanded(
+                      child: FittedBox(
+                        fit: BoxFit.contain, // otherwise the logo will be tiny
+                        child: const FlutterLogo(),
+                      ),
+                    ),
+                  ],
+                ),
+                Text('We 1move under cover and we move as one'),
+                Text('Through the night, we have one shot to live another day'),
+                Text('We cannot let a stray gunshot give us away'),
+                Text('We will fight up close, seize the moment and stay in it'),
+                Text('It’s either that or meet the business end of a bayonet'),
+                Text('The code word is ‘Rochambeau,’ dig me?'),
+                Text('Rochambeau!',
+                    style: DefaultTextStyle.of(context)
+                        .style
+                        .apply(fontSizeFactor: 2.0)),
+              ],
+            )
           ],
         ),
       ),
