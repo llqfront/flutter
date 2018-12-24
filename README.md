@@ -32,7 +32,6 @@ flutter run
 
 Flutter: New Project
 
-
 flutter packages get
 
 首先创建一个新的应用程序:

@@ -9,7 +9,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
-String url = "https://juejin.im/post/5bc5a56a5188255c352d88fe";
+String url = "https://www.bdplus.cn/";
 
 class WebViewPage extends StatefulWidget {
   @override
