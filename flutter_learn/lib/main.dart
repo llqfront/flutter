@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 
   Widget _builder(BuildContext context, AsyncSnapshot snapshot) {
     return MaterialApp(
-      title: 'Welcome to Flutter_study',
+      title: 'Welcome to Flutter_learn',
       theme: snapshot.data ? AppTheme().darkTheme : AppTheme().lightTheme,
       localizationsDelegates: [
         const TranslationsDelegate(),

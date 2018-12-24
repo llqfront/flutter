@@ -5,7 +5,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/rxdart/theme_select.dart';
+import 'package:flutter_learn/rxdart/theme_select.dart';
 
 class BlocProvider extends InheritedWidget {
   final ThemeSelect themeSelect = ThemeSelect();
