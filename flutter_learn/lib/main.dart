@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/pages/Routes.dart';
+import 'package:flutter_learn/pages/MyHomePage.dart';
 import 'package:flutter_learn/rxdart/bloc_provider.dart';
 import 'package:flutter_learn/locale/translations_delegate.dart';
 import 'package:flutter_learn/theme/app_theme.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
       home: Routes(),
       routes: <String, WidgetBuilder>{
         //静态路由,无法传参
-        'route': (_) => Routes()
+        'route': (_) => Routes(),
+        'Home': (_) => MyHomePage()
       },
     );
   }
