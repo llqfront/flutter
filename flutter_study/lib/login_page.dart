@@ -1,7 +1,11 @@
+/*
+ * Created by 李卓原 on 2018/10/13.
+ * email: zhuoyuan93@gmail.com
+ * 写一个贼特么好看的登录页面
+ */
+
 import 'package:flutter/material.dart';
 import 'package:groovin_material_icons/groovin_material_icons.dart';
-
-void main() => runApp(new LoginPage());
 
 class LoginPage extends StatefulWidget {
   @override
