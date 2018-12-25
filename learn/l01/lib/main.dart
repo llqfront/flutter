@@ -6,22 +6,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'first Flutter',
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text('first11 Flutter'),
+      title: 'first Flutter',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('first11 Flutter'),
+        ),
+        body: Center(
+          child: Container(
+            child: new Image.network(
+              'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=330275530,1504313412&fm=27&gp=0.jpg',
+              // scale: 6.0,
+              fit: BoxFit.contain,
             ),
-            body: Center(
-                child: Text(
-              'hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world',
-              textAlign: TextAlign.left,
-              overflow: TextOverflow.fade,
-              maxLines: 2,
-              style: TextStyle(
-                  fontSize: 25.0,
-                  color: Color.fromARGB(255, 255, 150, 150),
-                  decoration: TextDecoration.underline,
-                  decorationStyle: TextDecorationStyle.dashed,
-            ))));
+            width: 300.0,
+            height: 300.0,
+            color: Colors.lightBlue,
+            // margin: const EdgeInsets.all(10.0),
+          ),
+        ),
+      ),
+    );
   }
 }
