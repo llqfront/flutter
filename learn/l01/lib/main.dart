@@ -11,34 +11,40 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('First Flutter'),
         ),
-        body: Container(
-          child: new ListView(
-            children: <Widget>[
-              new ListTile(
-                leading: new Icon(Icons.access_time),
-                title: new Text('access_time'),
-              ),
-              new ListTile(
-                leading: new Icon(Icons.access_time),
-                title: new Text('access_time'),
-              ),
-              new ListTile(
-                leading: new Icon(Icons.access_time),
-                title: new Text('access_time'),
-              ),
-              new ListTile(
-                leading: new Icon(Icons.access_time),
-                title: new Text('access_time'),
-              ),
-              new Image.network(
-                'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=330275530,1504313412&fm=27&gp=0.jpg',
-                width: 100.0,
-                height: 100.0,
-              ),
-            ],
+        body: Center(
+          child: Container(
+            height: 200.0,
+            child: MyList(),
           ),
         ),
       ),
+    );
+  }
+}
+
+class MyList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: <Widget>[
+        new Container(
+          width: 180.0,
+          color: Colors.lightBlue,
+        ),
+        new Container(
+          width: 180.0,
+          color: Colors.lightGreen,
+        ),
+        new Container(
+          width: 180.0,
+          color: Colors.lightBlue,
+        ),
+        new Container(
+          width: 180.0,
+          color: Colors.lightGreen,
+        ),
+      ],
     );
   }
 }
