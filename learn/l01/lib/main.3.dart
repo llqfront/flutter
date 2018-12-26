@@ -6,10 +6,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'fisrt Flutter',
+      title: 'first Flutter',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('fisrt Flutter'),
+          title: Text('first11 Flutter'),
         ),
         body: Center(
           child: Container(
@@ -23,14 +23,7 @@ class MyApp extends StatelessWidget {
             ),
             width: 300.0,
             height: 300.0,
-            // color: Colors.lightBlue,
-            alignment: Alignment.centerLeft,
-            decoration: new BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Colors.lightBlue, Colors.greenAccent, Colors.purple],
-              ),
-              border: Border.all(width: 2.0, color: Colors.red),
-            ),
+            color: Colors.lightBlue,
             // margin: const EdgeInsets.all(10.0),
           ),
         ),
