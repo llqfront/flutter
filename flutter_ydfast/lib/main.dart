@@ -31,14 +31,6 @@ class MyApp extends StatelessWidget {
                     ),
                     width: 170.0,
                     height: 160.0,
-                    decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        const Radius.circular(4.0),
-                      ),
-                      border: new Border.all(
-                        width: 0.0,
-                      ),
-                    ),
                   ),
                   new Container(
                     padding: const EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 0.0),
@@ -52,14 +44,6 @@ class MyApp extends StatelessWidget {
                           ),
                           width: 177.0,
                           height: 76.0,
-                          decoration: new BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              const Radius.circular(4.0),
-                            ),
-                            border: new Border.all(
-                              width: 0.0,
-                            ),
-                          ),
                         ),
                         new Container(
                           margin: const EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 0.0),
@@ -70,21 +54,89 @@ class MyApp extends StatelessWidget {
                           ),
                           width: 177.0,
                           height: 76.0,
-                          decoration: new BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              const Radius.circular(4.0),
-                            ),
-                            border: new Border.all(
-                              width: 0.0,
-                            ),
-                          ),
                         )
                       ],
                     ),
                   ),
                 ],
               ),
-            )
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+                height: 44.0,
+                color: Colors.white,
+                margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                child: new Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: new Container(
+                        child: new Text(
+                          '交易量',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: new Container(
+                        child: new Text(
+                          '人气',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: new Container(
+                        child: new Text(
+                          '活跃',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: new Container(
+                        child: new Text(
+                          '距离',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ))
           ],
         ),
       ),
