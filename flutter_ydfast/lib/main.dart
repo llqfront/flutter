@@ -9,9 +9,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'First Flutter App',
       home: Scaffold(
-        // appBar: AppBar(
-        //   title: Text('First Flutter App'),
-        // ),
+        appBar: AppBar(
+          elevation: 20.0,
+          backgroundColor: Colors.red,
+          brightness: Brightness.light,
+        ),
         body: new ListView(
           // scrollDirection: Axis.horizontal,
           children: <Widget>[
