@@ -22,7 +22,9 @@ export PATH=$JAVA_HOME/bin:$PATH
 export CLASS_PATH=$JAVA_HOME/lib:$CLASS_PATH
 
 
- 
+http://ju.outofmemory.cn/entry/366783 
+
+
 #PATH="/usr/local/var/mongodb/bin:${PATH}"
 #export PATH
 
