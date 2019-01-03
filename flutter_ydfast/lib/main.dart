@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List list = new List(); //列表要展示的数据
   ScrollController _scrollController = ScrollController(); //listview的控制器
   int _page = 1; //加载的页数
-  bool isLoading = true; //是否正在加载数据
+  bool isLoading = false; //是否正在加载数据
 
   @override
   void initState() {
@@ -86,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: RefreshIndicator(
         onRefresh: _onRefresh,
+        displacement: 40.0,
         child: new ListView(
           padding: new EdgeInsets.only(top: 0.0),
           // scrollDirection: Axis.horizontal,
@@ -214,6 +215,707 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              height: 120.0,
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                    margin: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  ),
+                  new Container(
+                    child: new Image.network(
+                      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3795146784,3587545844&fm=26&gp=0.jpg',
+                      // scale: 6.0,
+                      fit: BoxFit.cover,
+                    ),
+                    width: 113.0,
+                    height: 120.0,
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 44.0,
+              color: Colors.white,
+              margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              child: new Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '交易量',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '人气',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '活跃',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: new Container(
+                      child: new Text(
+                        '距离',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Container(
+              height: 555.0,
+              child: ListView.builder(
+                itemBuilder: _renderRow,
+                itemCount: list.length + 1, //这里!这里!这里!
+                controller: _scrollController,
+              ),
+            )
             // new Container(
             //   height: 599.0,
             //   child: new CustomScrollView(
