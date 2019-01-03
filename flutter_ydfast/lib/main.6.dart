@@ -4,8 +4,6 @@ import 'package:flutter_ydfast/swiper_list.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // 刷新时数据请求
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
